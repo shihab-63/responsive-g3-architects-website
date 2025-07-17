@@ -1,0 +1,32 @@
+/* Word Sans Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Work Sans", sans-serif;
+}
+
+/* CSS Variables */
+:root {
+    --text-color: #131313;
+    --bg-color: #FFFFFF;
+    --section-color: #FFF4E6;
+    --other-color: #727272;
+    --main-color: #FF900E;
+}
+
+/* Start Repeated Style */
+
+
+
+/* End Repeated Style */
+
+
+body {
+    background-color: var(--bg-color);
+}
