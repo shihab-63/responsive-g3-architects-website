@@ -13,15 +13,23 @@
 
 /* CSS Variables */
 :root {
-    --text-color: #131313;
-    --bg-color: #FFFFFF;
-    --section-color: #FFF4E6;
-    --other-color: #727272;
-    --main-color: #FF900E;
+    --dark-01: #131313;
+    --dark-02: #424242;
+    --dark-03: #727272;
+    --white-color: #ffffff;
+    --brand-color: #FF900E;
 }
 
 /* Start Repeated Style */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
+.display-flex {
+    display: flex;
+    align-items: center;
+}
 
 
 /* End Repeated Style */
@@ -29,4 +37,35 @@
 
 body {
     background-color: var(--bg-color);
+}
+
+/* Header */
+header {
+    background-color: #FFF4E7;
+}
+.navbar {
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo h2 {
+    color: var(--dark-01);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav_links {
+    gap: 3rem;
+}
+
+.nav_links a {
+    color: var(--dark-02);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    transition: all .50s ease;
+}
+
+.nav_links a:hover {
+    color: var(--brand-color);
 }
