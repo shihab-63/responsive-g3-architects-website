@@ -46,6 +46,20 @@ section {
     margin: 100px;
 }
 
+.section_title {
+    color: var(--dark-01);
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.section_desception {
+    color: var(--dark-03);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    max-width: 540px;
+}
+
 /* End Repeated Style */
 
 
@@ -165,6 +179,71 @@ header {
 }
 
 
+/* Facts Section */
+.facts_content {
+    margin-bottom: 80px;
+}
+
+.facts_content h2 {
+    margin-bottom: 10px;
+}
+
+.facts_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fact-card {
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid var(--brand-color);
+    transition: all .35s ease;
+}
+
+.fact-card:hover {
+    /* border: 1px solid transparent; */
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.fact-card h4 {
+    color: var(--dark-02);
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 10px auto 5px;
+}
+
+.fact-card p {
+    color: var(--dark-03);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Our Sponsors Section */
+.sponsor_content {
+    text-align: center;
+}
+
+.sponsor_content .section_desception {
+    margin: 10px auto;
+}
+
+.sponsor_img {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.sponsor_img:hover {
+    filter: grayscale(100%);
+}
+
 
 /* Responsive Small Devices */
 @media screen and (max-width: 576px) {
@@ -174,15 +253,38 @@ header {
         flex-direction: column;
     }
 
-    .future_img {
+    .future_img,
+    .facts_container,
+    .sponsor_img
+    {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sponsor_img {
+        gap: 30px;
+    }
+
+    .facts_container {
+        justify-items: center;
+        gap: 24px;
     }
 
     .future_content {
         margin-top: 30px;
         margin-left: 20px;
     }
+
+    .facts_content {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .fact-card {
+        justify-items: center;
+    }
+
 }
+
 
 /* Responsive Medium Devices */
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -193,5 +295,18 @@ header {
     .future_content {
         margin-top: 30px;
         margin-left: 50px;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .facts_container, .sponsor_img {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        justify-items: center;
+    }
+
+    .facts_content{
+        justify-items: center;
+        text-align: center;
     }
 }
